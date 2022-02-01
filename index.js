@@ -19,7 +19,7 @@ mongoose.connect('mongodb+srv://dlwogns312:dlqhdtjq5@coje.egm6j.mongodb.net/myFi
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!~~')
 })
 
 app.post('/register',(req,res)=>{
