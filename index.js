@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 5000
 const bodyParser = require('body-parser');
+
+const config= require('./config/key');
+ 
 const {User} = require("./models/User");
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -9,7 +12,7 @@ app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
 const { response } = require('express');
-mongoose.connect('mongodb+srv://dlwogns312:dlqhdtjq5@coje.egm6j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect(config.mongoURI,
 {
  
 },
